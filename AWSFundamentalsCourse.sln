@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lambda", "Lambda", "{E5CB8C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsPublisher", "SQSDemo\SqsPublisher\SqsPublisher.csproj", "{7A5C949B-AA08-4100-AD17-9A1426C099DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsConsumer", "SQSDemo\SqsConsumer\SqsConsumer.csproj", "{D487E66B-CCA3-49CC-95E9-668E642D4653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +23,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
+		{D487E66B-CCA3-49CC-95E9-668E642D4653} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D487E66B-CCA3-49CC-95E9-668E642D4653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D487E66B-CCA3-49CC-95E9-668E642D4653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D487E66B-CCA3-49CC-95E9-668E642D4653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D487E66B-CCA3-49CC-95E9-668E642D4653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
