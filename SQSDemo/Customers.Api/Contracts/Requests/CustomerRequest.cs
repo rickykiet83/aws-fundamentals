@@ -8,5 +8,5 @@ public class CustomerRequest
 
     public string Email { get; init; } = default!;
 
-    public DateTime DOB { get; init; } = default!;
+    public DateTime Dob { get; init; } = default!;
 }

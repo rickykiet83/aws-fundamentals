@@ -13,7 +13,7 @@ public static class DtoToDomainMapper
             Email = customerDto.Email,
             GitHubUsername = customerDto.GitHubUsername,
             FullName = customerDto.FullName,
-            DateOfBirth = customerDto.DateOfBirth
+            Dob = customerDto.Dob
         };
     }
 }

@@ -13,7 +13,7 @@ public static class ApiContractToDomainMapper
             Email = request.Email,
             GitHubUsername = request.GitHubUsername,
             FullName = request.FullName,
-            DateOfBirth = request.DOB
+            Dob = request.Dob
         };
     }
 
@@ -25,7 +25,7 @@ public static class ApiContractToDomainMapper
             Email = request.Customer.Email,
             GitHubUsername = request.Customer.GitHubUsername,
             FullName = request.Customer.FullName,
-            DateOfBirth = request.Customer.DOB
+            Dob = request.Customer.Dob
         };
     }
 }

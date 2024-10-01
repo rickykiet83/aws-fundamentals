@@ -2,6 +2,7 @@ using Customers.Api.Contracts.Requests;
 using Customers.Api.Contracts.Responses;
 using Customers.Api.Mapping;
 using Customers.Api.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Customers.Api.Endpoints;
 
@@ -52,9 +53,13 @@ public static class CustomerEndpoints
             .Produces<IEnumerable<CustomerResponse>>(StatusCodes.Status200OK)
             ;
 
-        group.MapPut("/{id:guid}", async (ICustomerService service, UpdateCustomerRequest request) =>
+        group.MapPut("/{id:guid}", async (
+                [FromRoute]Guid id, 
+                [FromServices]ICustomerService service, 
+                [FromBody]UpdateCustomerRequest request) =>
             {
-                var existingCustomer = await service.GetAsync(request.Id);
+                request.Id = id;
+                var existingCustomer = await service.GetAsync(id);
 
                 if (existingCustomer is null)
                     return Results.NotFound();

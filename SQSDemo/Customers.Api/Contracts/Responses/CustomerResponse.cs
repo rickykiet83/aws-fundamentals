@@ -10,5 +10,5 @@ public class CustomerResponse
 
     public string Email { get; init; } = default!;
 
-    public DateTime DateOfBirth { get; init; }
+    public DateTime Dob { get; init; }
 }

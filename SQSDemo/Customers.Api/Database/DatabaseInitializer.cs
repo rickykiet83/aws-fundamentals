@@ -19,6 +19,6 @@ public class DatabaseInitializer
         GitHubUsername TEXT NOT NULL,
         FullName TEXT NOT NULL,
         Email TEXT NOT NULL,
-        DateOfBirth TEXT NOT NULL)");
+        Dob DATE NOT NULL)");
     }
 }

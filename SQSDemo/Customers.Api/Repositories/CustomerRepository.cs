@@ -17,8 +17,8 @@ public class CustomerRepository : ICustomerRepository
     {
         using var connection = await _connectionFactory.CreateConnectionAsync();
         var result = await connection.ExecuteAsync(
-            @"INSERT INTO Customers (Id, GitHubUsername, FullName, Email, DateOfBirth) 
-            VALUES (@Id, @GitHubUsername, @FullName, @Email, @DateOfBirth)",
+            @"INSERT INTO Customers (Id, GitHubUsername, FullName, Email, Dob) 
+            VALUES (@Id, @GitHubUsername, @FullName, @Email, @Dob)",
             customer);
         return result > 0;
     }
@@ -41,7 +41,7 @@ public class CustomerRepository : ICustomerRepository
         using var connection = await _connectionFactory.CreateConnectionAsync();
         var result = await connection.ExecuteAsync(
             @"UPDATE Customers SET GitHubUsername = @GitHubUsername, FullName = @FullName, Email = @Email, 
-                 DateOfBirth = @DateOfBirth WHERE Id = @Id",
+                 Dob = @Dob WHERE Id = @Id",
             customer);
         return result > 0;
     }

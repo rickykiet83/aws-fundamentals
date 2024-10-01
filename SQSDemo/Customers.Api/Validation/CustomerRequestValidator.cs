@@ -17,7 +17,7 @@ public partial class CustomerRequestValidator : AbstractValidator<CustomerReques
         RuleFor(x => x.GitHubUsername)
             .Matches(UsernameRegex());
 
-        RuleFor(x => x.DOB)
+        RuleFor(x => x.Dob)
             .LessThan(DateTime.Now)
             .WithMessage("Your date of birth cannot be in the future");
     }
