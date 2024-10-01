@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQSDemo", "SQSDemo", "{9F9D4C8B-2595-410B-99F7-87191A7AD30D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SNSDemo", "SNSDemo", "{416F130F-9210-4A19-AF58-1DA45FECED16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamoDb", "DynamoDb", "{5E209CA3-066F-4CA7-9794-600E0F9FC1C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "S3", "S3", "{F59185B2-347F-446B-834E-DA529838BF9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecretsManager", "SecretsManager", "{DA06CA0C-7FEA-4021-9625-7F4446B942B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lambda", "Lambda", "{E5CB8C8B-2923-4C66-B0B2-E424D40566C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsPublisher", "SQSDemo\SqsPublisher\SqsPublisher.csproj", "{7A5C949B-AA08-4100-AD17-9A1426C099DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A5C949B-AA08-4100-AD17-9A1426C099DD} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
