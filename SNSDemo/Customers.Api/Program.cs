@@ -1,4 +1,4 @@
-using Amazon.SQS;
+using Amazon.SimpleNotificationService;
 using Customers.Api.Database;
 using Customers.Api.Endpoints;
 using Customers.Api.Messaging;
@@ -41,9 +41,9 @@ builder.Services.AddSingleton<DatabaseInitializer>();
 builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
 builder.Services.AddSingleton<IGitHubService, GitHubService>();
-builder.Services.Configure<QueueSettings>(builder.Configuration.GetSection(QueueSettings.Key));
-builder.Services.AddSingleton<IAmazonSQS, AmazonSQSClient>();
-builder.Services.AddSingleton<ISqsMessenger, SqsMessenger>();
+builder.Services.Configure<TopicSettings>(builder.Configuration.GetSection(TopicSettings.Key));
+builder.Services.AddSingleton<IAmazonSimpleNotificationService, AmazonSimpleNotificationServiceClient>();
+builder.Services.AddSingleton<ISnsMessenger, SnsMessenger>();
 
 builder.Services.AddHttpClient("GitHub", httpClient =>
 {

@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.400.30" />
         <PackageReference Include="Dapper" Version="2.1.35" />
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
@@ -15,7 +16,6 @@
         <PackageReference Include="MinimalApis.Extensions" Version="0.11.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
         <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.301" />
-        <PackageReference Include="AWSSDK.SQS" Version="3.7.400.30" />
     </ItemGroup>
     
 
