@@ -1,12 +1,13 @@
 using System.Text.Json;
 using Amazon.SQS;
 using Amazon.SQS.Model;
-using Customers.Api.Contracts.Messages;
+using Customers.Consumer.Messages;
+using MediatR;
 using Microsoft.Extensions.Options;
 
 namespace Customers.Consumer;
 
-public class QueueConsumerService(IAmazonSQS sqs, IOptions<QueueSettings> queueSettings) : BackgroundService
+public class QueueConsumerService(IAmazonSQS sqs, IOptions<QueueSettings> queueSettings, IMediator mediator, ILogger<QueueConsumerService> logger) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -25,15 +26,25 @@ public class QueueConsumerService(IAmazonSQS sqs, IOptions<QueueSettings> queueS
             foreach (var message in response.Messages)
             {
                 var messageType = message.MessageAttributes["MessageType"].StringValue;
-                switch (messageType)
+                
+                var type = Type.GetType($"Customers.Consumer.Messages.{messageType}");
+                if (type == null)
                 {
-                    case nameof(CustomerCreatedMessage):
-                        break;
-                    case nameof(CustomerUpdatedMessage):
-                        break;
-                    case nameof(CustomerDeletedMessage):
-                        break;
+                    logger.LogWarning($"Unknown message type: {messageType}");
+                    continue;
                 }
+                
+                var typedMessage = (ISqsMessage)JsonSerializer.Deserialize(message.Body, type)!;
+                try
+                {
+                    await mediator.Send(typedMessage, stoppingToken);
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Error processing message");
+                    continue;
+                }
+                
                 // Process the message
                 await sqs.DeleteMessageAsync(queueUrlResponse.QueueUrl, message.ReceiptHandle, stoppingToken);
             }
