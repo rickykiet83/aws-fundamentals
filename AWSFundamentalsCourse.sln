@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsConsumer", "SQSDemo\SqsC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Api", "SQSDemo\Customers.Api\Customers.Api.csproj", "{AE639F5B-A1B6-4B56-BBB9-10DE25DD6958}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Consumer", "SQSDemo\Customers.Consumer\Customers.Consumer.csproj", "{DE4D5D12-5BFF-4D0C-BCE7-5A83DFBD63FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,7 @@ Global
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
 		{D487E66B-CCA3-49CC-95E9-668E642D4653} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
 		{AE639F5B-A1B6-4B56-BBB9-10DE25DD6958} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
+		{DE4D5D12-5BFF-4D0C-BCE7-5A83DFBD63FC} = {9F9D4C8B-2595-410B-99F7-87191A7AD30D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7A5C949B-AA08-4100-AD17-9A1426C099DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -41,5 +44,9 @@ Global
 		{AE639F5B-A1B6-4B56-BBB9-10DE25DD6958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE639F5B-A1B6-4B56-BBB9-10DE25DD6958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE639F5B-A1B6-4B56-BBB9-10DE25DD6958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE4D5D12-5BFF-4D0C-BCE7-5A83DFBD63FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4D5D12-5BFF-4D0C-BCE7-5A83DFBD63FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4D5D12-5BFF-4D0C-BCE7-5A83DFBD63FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4D5D12-5BFF-4D0C-BCE7-5A83DFBD63FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
