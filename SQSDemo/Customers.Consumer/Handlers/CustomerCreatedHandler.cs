@@ -7,6 +7,7 @@ public class CustomerCreatedHandler(ILogger<CustomerCreatedHandler> logger) : IR
 {
     public async Task Handle(CustomerCreatedMessage request, CancellationToken cancellationToken)
     {
+        // throw new Exception("Something went wrong");
         logger.LogInformation("Customer created: {FullName} ({Email})", request.FullName, request.Email);
     }
 }
