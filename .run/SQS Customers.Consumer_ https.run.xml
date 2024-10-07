@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Customers.Consumer: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+  <configuration default="false" name="SQS Customers.Consumer: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
     <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SQSDemo/Customers.Consumer/Customers.Consumer.csproj" />
     <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
     <option name="LAUNCH_PROFILE_NAME" value="https" />

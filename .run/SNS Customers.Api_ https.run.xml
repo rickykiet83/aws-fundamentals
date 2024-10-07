@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Customers.Api: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-    <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SQSDemo/Customers.Api/Customers.Api.csproj" />
+  <configuration default="false" name="SNS Customers.Api: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+    <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SNSDemo/Customers.Api/Customers.Api.csproj" />
     <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
     <option name="LAUNCH_PROFILE_NAME" value="https" />
     <option name="USE_EXTERNAL_CONSOLE" value="0" />
